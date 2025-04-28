@@ -13,7 +13,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+src/*
+src*
+index.html
 public/*
+public*
 .idea*
 config.*
 config.json*

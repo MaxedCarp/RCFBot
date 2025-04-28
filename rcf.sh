@@ -1,0 +1,1 @@
+while true ; do node ./rcflush-commands.js  && echo "Flushing Complete!" && sleep 1 && node ./rcdeploy-commands.js && echo "Refreshing Complete!" && sleep 3 && node ./rcf.js && echo "Restarting in 3 Seconds!" && sleep 1 && echo "Restarting in 2 Seconds!" && sleep 1 && echo "Restarting in 1 Second!" && sleep 1; done

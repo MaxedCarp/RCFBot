@@ -1,0 +1,26 @@
+{
+  "name": "rcf",
+  "version": "0.0.0",
+  "description": "rcf",
+  "main": "app.js",
+  "scripts": {
+    "update": "pnpm i",
+    "pull": "git pull https://github.com/MaxedCarp/RCFBot.git main",
+    "build": "npm run pull && npm run update",
+    "flush": "node rcflush-commands.js",
+    "deploy": "node rcdeploy-commands.js",
+    "run-partial": "npm run deploy && npm run run-bot",
+    "run-full": "npm run flush && npm run deploy && npm run run-bot",
+    "run-bot": "node rcf.js"
+  },
+  "author": {
+    "name": "MaxedCarp"
+  },
+  "devDependencies": {
+    "discord-rpc": "^4.0.1",
+    "discord.js": "^14.13.0",
+    "Math": "^0.0.1-security",
+    "mongodb": "^6.3.0",
+    "python": "^0.0.4"
+  }
+}
