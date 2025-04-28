@@ -16,8 +16,6 @@ module.exports = {
 			var dbo = ddb.db("warframe");
 			collection = dbo.collection("users");
 			colframes = dbo.collection("frames");
-			const regFrames = await colframes.find({name: {$regex: '^[^ ]*$'}}).toArray();
-			const primeFrames = await colframes.find({name: {$regex: '^.*[ ].*$'}}).toArray();
 			const data = await collection.find({"id": user?.id ||interaction.user.id}).toArray();
 			if (data.length > 0) {
 				let obj = await collection.find({"id": user?.id ||interaction.user.id}).toArray();
